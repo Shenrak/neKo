@@ -7,7 +7,7 @@
     "dev": "NODE_ENV=development nodemon server.js",
     "start": "node server.js",
     "test": "find ./test -name 'index.js' | xargs mocha -R spec",
-    "testwin" : "find ./test -name 'index.js' | mocha -R spec"
+    "testwin": "find ./test -name 'index.js' | mocha -R spec"
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,8 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
-    "koa": "^1.2.5",
-    "koa-router": "^5.4.0",
-    "lodash": "^4.17.4",
+    "koa": "^2.0.1",
+    "koa-router": "^7.1.0",
     "rethinkdb": "^2.3.3"
   }
 }
