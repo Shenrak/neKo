@@ -4,12 +4,17 @@
 
 ## Installing
 
-  * Make sure you have [Node](https://nodejs.org/en/) installed - API is coded with JavaScript and NodeJS.
+Make sure you have [Node](https://nodejs.org/en/) installed - API is coded with JavaScript and NodeJS.
+You can then clone the repository with `git`:
+```bash
+git clone https://github.com/Shenrak/neKo
+```
 
 ## Building
 
-  * Clone the repository
-  * Run `npm install`; this will install the dependencies.
+  * `cd` into the neKoApi folder
+  * Run `npm install` to install the dependencies
+  * Run `npm start` to start neKo
 
 <br>
 Feel free to explore the code, create issues and/or **contribute** !

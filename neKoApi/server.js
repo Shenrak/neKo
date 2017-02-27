@@ -1,20 +1,20 @@
-var koa = require('koa');
-var router = require('koa-router');
-var app = koa();
+const Koa = require('koa');
+const app = new Koa();
 
-var _ = router(); //Instantiate the router
+const routes = require('./app/routes');
 
-_.get('/test', function* (){this.status = 200}); // Define routes
-app.use(_.routes()); //Use the routes defined using the router
 app.use(allowCrossDomain);
 
+for (let route of routes)
+  app.use(route.routes());
 
-function *allowCrossDomain (next){
-    this.header('Access-Control-Allow-Origin', '*');
-    this.header('Content-Type', 'text/html; charset=utf-8');
-    this.header('Access-Control-Allow-Credentials', true);
-    this.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    this.header('Access-Control-Allow-Headers', 'Content-Type,Authorization,Origin');
+async function allowCrossDomain (ctx, next){
+    ctx.set('Access-Control-Allow-Origin', '*');
+    ctx.set('Content-Type', 'text/html; charset=utf-8');
+    ctx.set('Access-Control-Allow-Credentials', true);
+    ctx.set('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    ctx.set('Access-Control-Allow-Headers', 'Content-Type,Authorization,Origin');
+    await next;
 }
 
 app.listen(8085, function(){
