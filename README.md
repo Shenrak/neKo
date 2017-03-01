@@ -1,15 +1,5 @@
 # neKo
 
-[neKo](https://github.com/Shenrak/neKo) is an innovative chat created by two students from France. It has been designed to offer several brand new user-friendly features.
+This is the old repository of the chat **neKo**. To see the so-called app, check [neKo](https://github.com/ShinGecko/neKo) repo. You can also check [neKo API](https://github.com/ShinGecko/neKo-Api) !
 
-## Installing
-
-  * Make sure you have [Node](https://nodejs.org/en/) installed - API is coded with JavaScript and NodeJS.
-
-## Building
-
-  * Clone the repository
-  * Run `npm install`; this will install the dependencies.
-
-<br>
-Feel free to explore the code, create issues and/or **contribute** !
+_Thank you_.
